@@ -1,0 +1,99 @@
+body {
+    font-size: 20px;
+    margin: 0 0 0 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    cursor: pointer;
+}
+
+ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+li {
+    color: #a0a0a4;
+    padding-top: 5px;
+}
+
+img {
+vertical-align:middle;
+}
+
+#divMain {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 1;
+}
+
+#divCategory {
+    position:absolute;
+    display:none;
+    bottom:0px;
+    width: 100%;
+    height: 300px;
+    background-color: #f0f8ff;
+    z-index: 10;
+}
+
+#divEditSite {
+    position:absolute;
+    display:none;
+    top:0px;
+    bottom:0px;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f8ff;
+    z-index: 10;
+}
+
+    #divEditSite table {
+    width:100%;
+    }
+
+    #divEditSite select {
+    width:100%;
+    }
+
+    #divEditSite input {
+    width:100%;
+    }
+
+#divNewTab {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#divSearch {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.subCategory {
+    padding: 10px 0px 0px 10px;
+}
+
+.title {
+    color: #808080;
+    font-weight: bold;
+}
+
+.textbox {
+}
+
+.disabled
+{
+	background-color:#F5F5F5
+}
