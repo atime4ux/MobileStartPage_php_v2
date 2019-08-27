@@ -136,7 +136,7 @@ function ToggleDisplayProp(categoryIdx) {
     }
 }
 function IsMobile() {
-    var filter = "win16|win32|win64|mac";
+    var filter = "win16|win32|win64|mac|MacIntel";
 
     if (navigator.platform) {
         if (filter.indexOf(navigator.platform.toLowerCase()) >= 0) {
