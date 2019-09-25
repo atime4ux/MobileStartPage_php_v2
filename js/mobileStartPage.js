@@ -21,6 +21,7 @@ function InitControl() {
     });
 
     $('.subCategory .site').click(function (evt) {
+        evt.preventDefault()
         const $elem = $(evt.currentTarget)
         MovePage($elem.data('siteUrlMobile'), $elem.data('siteUrl'))
     });
@@ -98,9 +99,9 @@ function DrawPage(data) {
         for (j = 0; j < lstSite.length; j++) {
             const site = lstSite[j]
             const $liSite = $('<li></li>')
-                .append(`<span class='site' id='site_${site.site_idx}' data-site-url-mobile='${site.site_url_mobile}' data-site-url='${site.site_url}' style='margin-right:20px'>${site.site_name}</span>`)
+                .append(`<a class='site' id='site_${site.site_idx}' data-site-url-mobile='${site.site_url_mobile}' data-site-url='${site.site_url}' style='margin-right:20px'>${site.site_name}</a>`)
             if (publicYn == '') {
-                $liSite.append(`<span class='mod_site' style='cursor:pointer; margin-right:20px;' data-site-idx='${site.site_idx}' >[수정]</span>`)
+                $liSite.append(`<a class='mod_site' style='cursor:pointer; margin-right:20px;' data-site-idx='${site.site_idx}' >[수정]</a>`)
             }
 
             $subCategory.find('ul').append($liSite)
