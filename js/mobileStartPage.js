@@ -99,7 +99,7 @@ function DrawPage(data) {
         for (j = 0; j < lstSite.length; j++) {
             const site = lstSite[j]
             const $liSite = $('<li></li>')
-                .append(`<a class='site' id='site_${site.site_idx}' data-site-url-mobile='${site.site_url_mobile}' data-site-url='${site.site_url}' style='margin-right:20px'>${site.site_name}</a>`)
+                .append(`<a class='site' id='site_${site.site_idx}' data-site-url-mobile='${site.site_url_mobile}' data-site-url='${site.site_url}' style='margin-right:20px'><span>${site.site_name}</span></a>`)
             if (publicYn == '') {
                 $liSite.append(`<a class='mod_site' style='cursor:pointer; margin-right:20px;' data-site-idx='${site.site_idx}' >[수정]</a>`)
             }
@@ -137,11 +137,18 @@ function ToggleDisplayProp(categoryIdx) {
     }
 }
 function IsMobile() {
-    var filter = "win16|win32|win64|mac|MacIntel";
+    var filter = "win16|win32|win64|mac|macintel";
 
     if (navigator.platform) {
         if (filter.indexOf(navigator.platform.toLowerCase()) >= 0) {
             //데스크탑
+            var agentFilter = ['android', 'iphone'];
+            for (let i = 0; i < agentFilter.length; i += 1) {
+                if (navigator.userAgent.toLowerCase().indexOf(agentFilter[i]) > 0) {
+                    return true;
+                }
+            }
+
             return false;
         }
     }
